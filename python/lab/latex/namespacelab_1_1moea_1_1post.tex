@@ -1,0 +1,134 @@
+\hypertarget{namespacelab_1_1moea_1_1post}{}\doxysection{lab.\+moea.\+post Namespace Reference}
+\label{namespacelab_1_1moea_1_1post}\index{lab.moea.post@{lab.moea.post}}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classlab_1_1moea_1_1post_1_1HistoryData}{History\+Data}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{namespacelab_1_1moea_1_1post_a5dd03e62c8e030a5b0f3caa6b4b4b929}{calc\+G\+D\+\_\+\+Sphere}} (objs)
+\item 
+def \mbox{\hyperlink{namespacelab_1_1moea_1_1post_a0305f7d0ca70e6ccb385923bb7afb5ac}{load\+Reference\+Set}} (path, nobj)
+\item 
+def \mbox{\hyperlink{namespacelab_1_1moea_1_1post_a026181a076ad941299f17ac7b971e282}{load\+Csv\+Data}} (path)
+\item 
+def \mbox{\hyperlink{namespacelab_1_1moea_1_1post_a63444228ced2090a9b77c1dc76fb1702}{calc\+Mean\+Accum\+Data}} (path, ntrial)
+\item 
+def \mbox{\hyperlink{namespacelab_1_1moea_1_1post_ac9a47caf427e8b444dff36b0b6487c05}{load\+Mean\+Accum\+Datas}} (path, a\+Names)
+\item 
+def \mbox{\hyperlink{namespacelab_1_1moea_1_1post_ac7186d63a38048aa0c01bcc164687842}{make\+Mean\+Accum\+Datas}} (path, a\+Names, ntrial)
+\item 
+def \mbox{\hyperlink{namespacelab_1_1moea_1_1post_aa47010e141620fab712b82a26d766238}{calc\+\_\+nd}} (objs, sense=None)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Post-process functions for multi-objective optimization results\end{DoxyVerb}
+ 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacelab_1_1moea_1_1post_aa47010e141620fab712b82a26d766238}\label{namespacelab_1_1moea_1_1post_aa47010e141620fab712b82a26d766238}} 
+\index{lab.moea.post@{lab.moea.post}!calc\_nd@{calc\_nd}}
+\index{calc\_nd@{calc\_nd}!lab.moea.post@{lab.moea.post}}
+\doxysubsubsection{\texorpdfstring{calc\_nd()}{calc\_nd()}}
+{\footnotesize\ttfamily def lab.\+moea.\+post.\+calc\+\_\+nd (\begin{DoxyParamCaption}\item[{}]{objs,  }\item[{}]{sense = {\ttfamily None} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Calculate non-dominated(Pareto) solutions
+
+Args:
+    objs (DataFrame): Objective values
+    sense (list): Optimal directions ('min' or 'max')
+
+Returns:
+    Non-dominated solutions
+\end{DoxyVerb}
+ \mbox{\Hypertarget{namespacelab_1_1moea_1_1post_a5dd03e62c8e030a5b0f3caa6b4b4b929}\label{namespacelab_1_1moea_1_1post_a5dd03e62c8e030a5b0f3caa6b4b4b929}} 
+\index{lab.moea.post@{lab.moea.post}!calcGD\_Sphere@{calcGD\_Sphere}}
+\index{calcGD\_Sphere@{calcGD\_Sphere}!lab.moea.post@{lab.moea.post}}
+\doxysubsubsection{\texorpdfstring{calcGD\_Sphere()}{calcGD\_Sphere()}}
+{\footnotesize\ttfamily def lab.\+moea.\+post.\+calc\+G\+D\+\_\+\+Sphere (\begin{DoxyParamCaption}\item[{}]{objs }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Calculate Generational Distance(GD) assuming that
+the PF is on a circumference of radius one.
+
+Args:
+    objs (DataFrame): Objective values
+Returns:
+    GD
+\end{DoxyVerb}
+ \mbox{\Hypertarget{namespacelab_1_1moea_1_1post_a63444228ced2090a9b77c1dc76fb1702}\label{namespacelab_1_1moea_1_1post_a63444228ced2090a9b77c1dc76fb1702}} 
+\index{lab.moea.post@{lab.moea.post}!calcMeanAccumData@{calcMeanAccumData}}
+\index{calcMeanAccumData@{calcMeanAccumData}!lab.moea.post@{lab.moea.post}}
+\doxysubsubsection{\texorpdfstring{calcMeanAccumData()}{calcMeanAccumData()}}
+{\footnotesize\ttfamily def lab.\+moea.\+post.\+calc\+Mean\+Accum\+Data (\begin{DoxyParamCaption}\item[{}]{path,  }\item[{}]{ntrial }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Calculate mean from all trial results(accum_img.csv)
+
+Final path of accum_img.csv is 'path/[0, ntrial]/accum_img.csv'.
+
+Args:
+    path (str): Base path of accum_img.csv
+    ntrial (int): The number of trial
+Returns:
+    meanAccumSet (DataFrame): Mean results
+\end{DoxyVerb}
+ \mbox{\Hypertarget{namespacelab_1_1moea_1_1post_a026181a076ad941299f17ac7b971e282}\label{namespacelab_1_1moea_1_1post_a026181a076ad941299f17ac7b971e282}} 
+\index{lab.moea.post@{lab.moea.post}!loadCsvData@{loadCsvData}}
+\index{loadCsvData@{loadCsvData}!lab.moea.post@{lab.moea.post}}
+\doxysubsubsection{\texorpdfstring{loadCsvData()}{loadCsvData()}}
+{\footnotesize\ttfamily def lab.\+moea.\+post.\+load\+Csv\+Data (\begin{DoxyParamCaption}\item[{}]{path }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Load CSV dataset as dataframe\end{DoxyVerb}
+ \mbox{\Hypertarget{namespacelab_1_1moea_1_1post_ac9a47caf427e8b444dff36b0b6487c05}\label{namespacelab_1_1moea_1_1post_ac9a47caf427e8b444dff36b0b6487c05}} 
+\index{lab.moea.post@{lab.moea.post}!loadMeanAccumDatas@{loadMeanAccumDatas}}
+\index{loadMeanAccumDatas@{loadMeanAccumDatas}!lab.moea.post@{lab.moea.post}}
+\doxysubsubsection{\texorpdfstring{loadMeanAccumDatas()}{loadMeanAccumDatas()}}
+{\footnotesize\ttfamily def lab.\+moea.\+post.\+load\+Mean\+Accum\+Datas (\begin{DoxyParamCaption}\item[{}]{path,  }\item[{}]{a\+Names }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Load mean_accm.csv for each algorithm
+
+Final path of mean_accm.csv is 'base_path/[aName]/mean_accm.csv'
+
+Args:
+    path (str): Base path of mean_accm.csv
+    aNames (list): Array of algorithm names
+
+Returns:
+    meanAccumDatas (dict): Loaded mean data stored in dictitonary format
+\end{DoxyVerb}
+ \mbox{\Hypertarget{namespacelab_1_1moea_1_1post_a0305f7d0ca70e6ccb385923bb7afb5ac}\label{namespacelab_1_1moea_1_1post_a0305f7d0ca70e6ccb385923bb7afb5ac}} 
+\index{lab.moea.post@{lab.moea.post}!loadReferenceSet@{loadReferenceSet}}
+\index{loadReferenceSet@{loadReferenceSet}!lab.moea.post@{lab.moea.post}}
+\doxysubsubsection{\texorpdfstring{loadReferenceSet()}{loadReferenceSet()}}
+{\footnotesize\ttfamily def lab.\+moea.\+post.\+load\+Reference\+Set (\begin{DoxyParamCaption}\item[{}]{path,  }\item[{}]{nobj }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Load reference pareto-fronto set
+
+Args:
+    path (str): path of reference set
+    nobj (int): the number of objectives
+
+Returns:
+    Reference Set
+\end{DoxyVerb}
+ \mbox{\Hypertarget{namespacelab_1_1moea_1_1post_ac7186d63a38048aa0c01bcc164687842}\label{namespacelab_1_1moea_1_1post_ac7186d63a38048aa0c01bcc164687842}} 
+\index{lab.moea.post@{lab.moea.post}!makeMeanAccumDatas@{makeMeanAccumDatas}}
+\index{makeMeanAccumDatas@{makeMeanAccumDatas}!lab.moea.post@{lab.moea.post}}
+\doxysubsubsection{\texorpdfstring{makeMeanAccumDatas()}{makeMeanAccumDatas()}}
+{\footnotesize\ttfamily def lab.\+moea.\+post.\+make\+Mean\+Accum\+Datas (\begin{DoxyParamCaption}\item[{}]{path,  }\item[{}]{a\+Names,  }\item[{}]{ntrial }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Calculate the mean from all trial results
+and save results into mean_accum.csv
+
+Final path of accum_img.csv is 'path/[aName]/[0, ntrial]/accum_img.csv'.
+
+Final path of mean_accm.csv is 'path/[aName]/mean_accm.csv'
+
+Args:
+    path (str): Base path of input/output data
+    aNames (list): Array of algorithm names
+    ntrial (int): The number of trial
+\end{DoxyVerb}
+ 
